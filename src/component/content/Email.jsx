@@ -21,7 +21,7 @@ export default function Email({ Email }) {
         }
         console.log(Data)
         try {
-            const Post = await Axios.post('https://mailfordoolean.vercel.app/postmsg',Data);
+            const Post = await Axios.post('https://mailerdo.vercel.app/',Data);
             if(Post.status === 200){
                 setName('');
                 setMessage('');
