@@ -27,6 +27,7 @@ export default function Email({ Email }) {
                 setMessage('');
                 setEmail('');
                 setAlert(true);
+                window.location.reload();
             }
         } catch (error) {
             alert(error);
