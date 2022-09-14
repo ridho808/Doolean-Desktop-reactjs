@@ -21,12 +21,13 @@ export default function Email({ Email }) {
         }
         console.log(Data)
         try {
-            const Post = await Axios.post('https://mailfordoolean.vercel.app/postmsg',Data);
+            const Post = await Axios.post('https://mailerdo.vercel.app/postmsg',Data);
             if(Post.status === 200){
                 setName('');
                 setMessage('');
                 setEmail('');
                 setAlert(true);
+                window.location.reload();
             }
         } catch (error) {
             alert(error);
@@ -48,15 +49,15 @@ export default function Email({ Email }) {
                         <form className='flex flex-col gap-2 w-full' onSubmit={SubmitMsg}>
                             <div className='flex flex-col justify-evenly gap-2 items-center text-gray-700'>
                                 <lable className="font-bold">Name</lable>
-                                <input value={Name} onChange={(value)=>setName(value.target.value)} type="text" placeholder='Your Name ...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
+                                <input value={Name} onChange={(value)=>setName(value.target.value)} type="text" required placeholder='Your Name ...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
                             </div>
                             <div className='flex flex-col justify-evenly gap-2 items-center text-gray-700'>
                                 <lable className="font-bold">Email</lable>
-                                <input value={email} onChange={(value)=>setEmail(value.target.value)} type="text" placeholder='Your Email...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
+                                <input value={email} onChange={(value)=>setEmail(value.target.value)} type="email" required placeholder='Your Email...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
                             </div>
                             <div className='flex flex-col justify-evenly gap-2 items-center text-gray-700'>
                                 <lable className="font-bold">Message</lable>
-                                <textarea value={Message} onChange={(value)=>setMessage(value.target.value)} type="text" placeholder='Message ...' className='border w-full h-[70px] p-2 rounded-md bg-white/70'></textarea>
+                                <textarea value={Message} onChange={(value)=>setMessage(value.target.value)} type="text" required placeholder='Message ...' className='border w-full h-[70px] p-2 rounded-md bg-white/70'></textarea>
                             </div>
                             <button className='bg-sky-500 rounded-xl font-bold w-[150px] h-[40px] flex items-center justify-center mx-auto text-white'>
                                 <AiFillMail size={25} /> SEND
