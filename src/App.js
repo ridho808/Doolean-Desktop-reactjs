@@ -6,12 +6,14 @@ import About from "./component/content/About";
 import Portfolio from "./component/content/Portfolio";
 import Email from "./component/content/Email";
 import Aos from "aos";
-import { SuperSEO } from "react-super-seo";
+import ScaleLoader from "react-spinners/ScaleLoader";
+import AppleIcn from './assets/icons.png';
 
 function App() {
   const [AboutApp, setAbout] = useState(false);
   const [BtnPortfolio,setPortfolio] = useState(false);
-  const [BtnEmail,setBtnEmail] = useState(false)
+  const [BtnEmail,setBtnEmail] = useState(false);
+  const [Loading,setLoading] = useState(false);
 
   const OpenAbout = () => {
     if(BtnPortfolio === true || BtnEmail === true){
@@ -36,30 +38,37 @@ function App() {
   }
   useEffect(()=>{
     Aos.init()
+  },[]);
+  useEffect(()=>{
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false);
+    },5000);
   },[])
   return (
     <>
-      <SuperSEO
-      title="Doolean Desktop | Personal Website"
-      description="Website Profile Frontend Developer"
-      openGraph={{
-        ogImage : "./assets/Abyss.png",
-        ogImageAlt: "DESKTOP",
-        ogImageWidth: 1200,
-        ogImageHeight: 630,
-        ogImageType: "png",
-      }}
-      />
-      <Navigation />
-      <main className="h-[90vh]">
-        {AboutApp ?<About oneClick={OpenAbout} twoClick={OpenAbout}/> : null}
-        {BtnPortfolio ? <Portfolio Open={OpenPortFolio}/>:null}
-        {BtnEmail ? <Email Email={OpenEmail}/> : null}
-      <Plank 
-      Click={OpenAbout} 
-      PortFolio={OpenPortFolio} 
-      OpnEmail={OpenEmail}/>
-      </main>
+    { Loading ? 
+      <div className="Loading">
+        <img src={AppleIcn} alt="Apple" width={60} className=""/>
+        <ScaleLoader  color="#FFFFFF" size={15}/> 
+        <h1 className="text-2xl text-white">DOOLEAN</h1>
+      </div>
+      :
+      (
+      <>
+        <Navigation />
+        <main className="h-[90vh]">
+          {AboutApp ?<About oneClick={OpenAbout} twoClick={OpenAbout}/> : null}
+          {BtnPortfolio ? <Portfolio Open={OpenPortFolio}/>:null}
+          {BtnEmail ? <Email Email={OpenEmail}/> : null}
+        <Plank 
+        Click={OpenAbout} 
+        PortFolio={OpenPortFolio} 
+        OpnEmail={OpenEmail}/>
+        </main>
+      </>
+      )
+    }
     </>
   );
 }

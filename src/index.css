@@ -30,3 +30,14 @@ body{
       transform: translatey(0px);
     }
   }
+
+.Loading{
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
