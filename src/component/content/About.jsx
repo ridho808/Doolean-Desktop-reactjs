@@ -43,8 +43,8 @@ export default function About(props) {
                         <div className="flex flex-row flex-wrap gap-3">
                             <a href="https://github.com/ridho808"><AiOutlineGithub size={30} /></a>
                             <a href="https://github.com/ridho808"><AiOutlineInstagram size={30} /></a>
-                            <a href="https://www.linkedin.com/in/ridho-80271b21b/"><AiOutlineLinkedin size={30} /></a>
-                            <a href="https://twitter.com/dho_808"><AiOutlineTwitter size={30} /></a>
+                            <a href="#"><AiOutlineLinkedin size={30} /></a>
+                            <a href="#"><AiOutlineTwitter size={30} /></a>
                         </div>
                         <h6 className="mt-2 text-[10px] text-center">Copyright@DOOLEAN 2022</h6>
                     </div>
