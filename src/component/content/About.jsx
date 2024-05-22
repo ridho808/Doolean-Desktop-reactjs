@@ -21,10 +21,10 @@ export default function About(props) {
                         <img src={Rxdxo} alt="RIDHO" className="w-[250px] object-fill border-4 border-white rounded-[360px]" />
                     </div>
                     <div className="w-full flex flex-col gap-2">
-                        <h3 className="text-lg"><strong>FULLSTACK</strong> DEVELOPER</h3>
+                        <h3 className="text-lg"><strong> FULLSTACK </strong> DEVELOPER</h3>
                         <h4 className="text-sm"><strong>Name</strong>  RIDHO</h4>
-                        <h4 className="text-sm"><strong>Age</strong>  23</h4>
-                        <h4 className="text-sm"><strong>Summary </strong></h4>
+                        <h4 className="text-sm"><strong>Age</strong>  24</h4>
+                        <h4 className="text-sm"><strong> Summary </strong></h4>
                         <p className="text-xs">have experience as a Web Developer for more than 1 year. The technology I use is HTML5, CSS3,
                             Javascript, NodeJs,and React.and I excited to learn new things about programming</p>
                         <h4 className="text-sm"><strong>Skill </strong></h4>
