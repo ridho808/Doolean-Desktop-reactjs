@@ -25,7 +25,7 @@ export default function About(props) {
                         <h4 className="text-sm"><strong>Name</strong>  RIDHO</h4>
                         <h4 className="text-sm"><strong>Age</strong>  24</h4>
                         <h4 className="text-sm"><strong> Summary </strong></h4>
-                        <p className="text-xs">have experience as a Web Developer for more than 1 year. The technology I use is HTML5, CSS3,
+                        <p className="text-xs">have experience as a Web Developer for more than 2 year. The technology I use is HTML5, CSS3,
                             Javascript, NodeJs,and React.and I excited to learn new things about programming</p>
                         <h4 className="text-sm"><strong>Skill </strong></h4>
                         <div className="flex flex-row flex-wrap">
