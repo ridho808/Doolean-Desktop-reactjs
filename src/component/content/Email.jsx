@@ -1,4 +1,4 @@
-import  Axios  from 'axios';
+import Axios from 'axios';
 import React, { useState } from 'react';
 import { AiFillMail } from 'react-icons/ai';
 import Swal from 'sweetalert2';
@@ -7,27 +7,27 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
 export default function Email({ Email }) {
-    const [Name,setName] = useState('');
-    const [email,setEmail] = useState('');
-    const [Message,setMessage] = useState('');
-    const [Alert,setAlert] = useState(Boolean);
+    const [Name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [Message, setMessage] = useState('');
+    const [Alert, setAlert] = useState(Boolean);
 
-    const SubmitMsg = async(event)=>{
+    const SubmitMsg = async (event) => {
+        // setAlert(true)
         event.preventDefault();
         const Data = {
-            name : Name,
-            email : email,
-            message : Message
+            name: Name,
+            email: email,
+            message: Message
         }
         console.log(Data)
         try {
-            const Post = await Axios.post('https://mailerdo.vercel.app/postmsg',Data);
-            if(Post.status === 200){
+            const Post = await Axios.post('https://mailerdo.vercel.app/postmsg', Data);
+            if (Post.status === 200) {
                 setName('');
                 setMessage('');
                 setEmail('');
                 setAlert(true);
-                window.location.reload();
             }
         } catch (error) {
             alert(error);
@@ -49,15 +49,15 @@ export default function Email({ Email }) {
                         <form className='flex flex-col gap-2 w-full' onSubmit={SubmitMsg}>
                             <div className='flex flex-col justify-evenly gap-2 items-center text-gray-700'>
                                 <lable className="font-bold">Name</lable>
-                                <input value={Name} onChange={(value)=>setName(value.target.value)} type="text" required placeholder='Your Name ...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
+                                <input value={Name} onChange={(value) => setName(value.target.value)} type="text" required placeholder='Your Name ...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
                             </div>
                             <div className='flex flex-col justify-evenly gap-2 items-center text-gray-700'>
                                 <lable className="font-bold">Email</lable>
-                                <input value={email} onChange={(value)=>setEmail(value.target.value)} type="email" required placeholder='Your Email...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
+                                <input value={email} onChange={(value) => setEmail(value.target.value)} type="email" required placeholder='Your Email...' className='border w-full h-[30px] p-2 rounded-md bg-white/70' />
                             </div>
                             <div className='flex flex-col justify-evenly gap-2 items-center text-gray-700'>
                                 <lable className="font-bold">Message</lable>
-                                <textarea value={Message} onChange={(value)=>setMessage(value.target.value)} type="text" required placeholder='Message ...' className='border w-full h-[70px] p-2 rounded-md bg-white/70'></textarea>
+                                <textarea value={Message} onChange={(value) => setMessage(value.target.value)} type="text" required placeholder='Message ...' className='border w-full h-[70px] p-2 rounded-md bg-white/70'></textarea>
                             </div>
                             <button className='bg-sky-500 rounded-xl font-bold w-[150px] h-[40px] flex items-center justify-center mx-auto text-white'>
                                 <AiFillMail size={25} /> SEND

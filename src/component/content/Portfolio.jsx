@@ -8,8 +8,8 @@ import TableApp from '../../assets/TableApp.png';
 
 export default function Portfolio({ Open }) {
     return (
-        <div data-aos="zoom-in" 
-        className="max-w-xl w-full backdrop-blur-xl bg-white/60 rounded-lg flex flex-col fixed top-[11%] sm:left-[20%] md:left-[18%] lg:left-[28%] xl:left-[30%] 2xl:left-[32%]">
+        <div data-aos="zoom-in"
+            className="max-w-xl w-full backdrop-blur-xl bg-white/60 rounded-lg flex flex-col fixed top-[11%] sm:left-[20%] md:left-[18%] lg:left-[28%] xl:left-[30%] 2xl:left-[32%]">
             <div className="flex flex-row gap-1 p-1 items-center">
                 <h1 className="w-full text-center font-bold bg-black/10 rounded-bl-lg rounded-tl-lg text-gray-800 ">Portfolio</h1>
                 <button onClick={Open} className="w-[15px] h-[15px] rounded-[360px] bg-yellow-300"></button>
