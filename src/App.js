@@ -10,7 +10,7 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import AppleIcn from './assets/icons.png';
 
 function App() {
-  const [AboutApp, setAbout] = useState(false);
+  const [AboutApp, setAbout] = useState(true);
   const [BtnPortfolio, setPortfolio] = useState(false);
   const [BtnEmail, setBtnEmail] = useState(false);
   const [Loading, setLoading] = useState(false);
