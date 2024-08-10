@@ -9,10 +9,10 @@ export default function Plank(props) {
                     <img src={File} width={50} className="object-fill" alt="ICONS" />
                 </button>
                 <button onClick={props.OpnEmail} className="transition ease-in-out hover:-translate-y-1 hover:scale-125 duration-150">
-                    <img src="https://www.apple.com/v/macbook-pro-13/m/images/specs/icon_mail__ea4dqj27ekqe_large_2x.png" width={50} className="object-fill" alt="ICONS" />
+                    <img src="https://banner2.cleanpng.com/20180420/pre/avfxryhpm.webp" width={50} className="object-fill" alt="ICONS" />
                 </button>
                 <button onClick={props.PortFolio} className="transition ease-in-out hover:-translate-y-1 hover:scale-125 duration-150">
-                    <img src="https://www.apple.com/v/macbook-pro-13/m/images/specs/icon_appstore__gfxbk0odreq2_large_2x.png" width={50} className="object-fill" alt="ICONS" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png" width={50} className="object-fill" alt="ICONS" />
                 </button>
                 <button onClick={props.Click} className="transition ease-in-out hover:-translate-y-1 hover:scale-125 duration-150">
                     <img src="https://purepng.com/public/uploads/large/purepng.com-settings-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596115dq1ho.png" width={50} className="object-fill" alt="ICONS" />
