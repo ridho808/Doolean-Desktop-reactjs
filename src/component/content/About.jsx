@@ -47,6 +47,7 @@ export default function About(props) {
                             <img src="https://img.icons8.com/?size=192&id=YKKmRFS8Utmm&format=png" alt="prisma" width={40} />
                             <img src="https://img.icons8.com/?size=192&id=MWiBjkuHeMVq&format=png" alt="next" width={40} />
                             <img src="https://img.icons8.com/?size=192&id=wpZmKzk11AzJ&format=png" alt="" width={40} />
+                            <img width="48" height="48" src="https://img.icons8.com/fluency/48/docker.png" alt="docker"/>
                         </div>
                         <h4 className="text-sm"><strong>Social Media </strong></h4>
                         <div className="flex flex-row flex-wrap gap-3">
